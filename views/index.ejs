@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Innlegg</title>
+</head>
+<body>
+  <h1>Innlegg</h1>
+  <form action="/legg-til-innlegg" method="POST">
+    <label for="tittel">Tittel:</label>
+    <input type="text" id="tittel" name="tittel" required>
+    <br>
+    <label for="tekst">Tekst:</label>
+    <textarea id="tekst" name="tekst" required></textarea>
+    <br>
+    <button type="submit">Legg til innlegg</button>
+  </form>
+  <br>
+  <% if (innlegg.length) { %>
+    <ul>
+      <% for (let i = 0; i < innlegg.length; i++) { %>
+        <li>
+          <h2><%= innlegg[i].tittel %></h2>
+          <p><%= innlegg[i].tekst %></p>
+          <form action="/fjern-innlegg/<%= innlegg[i].id %>" method="POST">
+            <button type="submit">Fjern innlegg</button>
+          </form>
+          <form action="/rediger-innlegg/<%= innlegg[i].id %>" method="POST">
+            <label for="tittel">Tittel:</label>
+            <input type="text" id="tittel" name="tittel" value="<%= innlegg[i].tittel %>" required>
+            <br>
+            <label for="tekst">Tekst:</label>
+            <textarea id="tekst" name="tekst" required><%= innlegg[i].tekst %></textarea>
+            <br>
+            <button type="submit">Oppdater innlegg</button>
+          </form>
+        </li>
+      <% } %>
+    </ul>
+  <% } else { %>
+    <p>Ingen innlegg å vise.</p>
+  <% } %>
+</body>
+</html>

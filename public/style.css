@@ -1,0 +1,101 @@
+/* Stil for hele siden */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Overskrift */
+  h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  /* Skjema */
+  form {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  textarea {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  button[type="submit"] {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  /* Liste med innlegg */
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-top: 0;
+    text-align: center;
+    
+  }
+  
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  /* Fjern- og rediger-knapper */
+  form button[type="submit"] {
+    background-color: #f44336;
+    margin-top: 10px;
+  }
+  
+  form button[type="submit"]:hover {
+    background-color: #d32f2f;
+  }
+  
+  form label {
+    display: block;
+    font-size: 18px;
+    margin-top: 20px;
+  }
+  

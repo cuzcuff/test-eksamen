@@ -5,8 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Innlegg</title>
   <link rel="stylesheet" type="text/css" href="/style.css">
+  <link rel="stylesheet" id="stylesheet" type="text/css" href="/style_light.css">
 
 </head>
+<body>
+  <header>
+    <button id="mode-toggle">Toggle mode</button>
+  </header>
+</form>
+</body>
 <body>
   <h1>Innlegg</h1>
   <form action="/legg-til-innlegg" method="POST">
@@ -43,5 +50,7 @@
   <% } else { %>
     <p>Ingen innlegg å vise.</p>
   <% } %>
+
+  <script src="client.js"></script>
 </body>
 </html>

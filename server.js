@@ -34,7 +34,6 @@ app.set('view engine', 'ejs');
 // Legg til støtte for å parse URL-kodede data
 app.use(bodyParser.urlencoded({ extended: false }));
 
-
 // Definer en rute for å vise alle innlegg
 app.get('/', (req, res) => {
   con.query('SELECT * FROM innlegg', (error, results) => {
